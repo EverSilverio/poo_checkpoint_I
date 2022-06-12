@@ -1,26 +1,29 @@
+package com.loja_capa_fina;
+import java.util.Random;
+
 public class Acessorio {
-    private String codigo;
+    private int codigo;
     private String nome;
     private int qtdEstoque;
     private String categoria;
     private String descricao;
     private double preco;
 
-    public Acessorio(String codigo, String nome, int qtdEstoque, String categoria, String descricao, double preco) {
-        this.codigo = codigo;
+    public Acessorio(String nome, int qtdEstoque, String categoria, String descricao) {
         this.nome = nome;
         this.qtdEstoque = qtdEstoque;
         this.categoria = categoria;
         this.descricao = descricao;
-        this.preco = preco;
+        this.codigo = generateRandom();
     }
 
-    public String getCodigo() {
+    private int generateRandom() {
+        int r = new Random().nextInt(99999);
+        return r;
+    }
+
+    public int getCodigo() {
         return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
     }
 
     public String getNome() {

@@ -1,16 +1,22 @@
+package com.loja_capa_fina;
+
+import java.time.LocalDate;
+
 public abstract class Funcionario {
     private String tipoDocumento;
     private String nroDocumento;
-    private String nome;
+    private String nomeCompleto;
+    private LocalDate dataNascimento;
     private String endereco;
     private Double salarioBase;
 
     public abstract void calcularSalario();
 
-    public Funcionario(String tipoDocumento, String nroDocumento, String nome, String endereco, Double salarioBase) {
+    public Funcionario(String tipoDocumento, String nroDocumento, String nomeCompleto, LocalDate dataNascimento, String endereco, Double salarioBase) {
         this.tipoDocumento = tipoDocumento;
         this.nroDocumento = nroDocumento;
-        this.nome = nome;
+        this.nomeCompleto = nomeCompleto;
+        this.dataNascimento = dataNascimento;
         this.endereco = endereco;
         this.salarioBase = salarioBase;
     }
@@ -31,12 +37,20 @@ public abstract class Funcionario {
         this.nroDocumento = nroDocumento;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeCompleto() {
+        return nomeCompleto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public String getEndereco() {

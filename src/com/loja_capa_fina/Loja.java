@@ -1,15 +1,21 @@
+package com.loja_capa_fina;
+
 public class Loja {
 
     private String endereco;
-    private int telefone;
+    private String telefone;
     private String cnpj;
-    private String horario;
+    private String horarioAbertura;
+    private String horarioFechamento;
+    private Acessorio[] acessorios;
+    private Funcionario[] funcionarios;
 
-    public Loja(String endereco, int telefone, String cnpj, String horario) {
+    public Loja(String endereco, String telefone, String cnpj, String horarioAbertura, String horarioFechamento) {
         this.endereco = endereco;
         this.telefone = telefone;
         this.cnpj = cnpj;
-        this.horario = horario;
+        this.horarioAbertura = horarioAbertura;
+        this.horarioFechamento = horarioFechamento;
     }
 
     public String getEndereco() {
@@ -20,11 +26,11 @@ public class Loja {
         this.endereco = endereco;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
@@ -36,11 +42,35 @@ public class Loja {
         this.cnpj = cnpj;
     }
 
-    public String getHorario() {
-        return horario;
+    public String getHorarioAbertura() {
+        return horarioAbertura;
     }
 
-    public void setHorario(String horario) {
-        this.horario = horario;
+    public void setHorarioAbertura(String horarioAbertura) {
+        this.horarioAbertura = horarioAbertura;
+    }
+
+    public String getHorarioFechamento() {
+        return horarioFechamento;
+    }
+
+    public void setHorarioFechamento(String horarioFechamento) {
+        this.horarioFechamento = horarioFechamento;
+    }
+
+    public Acessorio[] getAcessorios() {
+        return acessorios;
+    }
+
+    public void setAcessorios(Acessorio[] acessorios) {
+        this.acessorios = acessorios;
+    }
+
+    public Funcionario[] getFuncionarios() {
+        return funcionarios;
+    }
+
+    public void setFuncionarios(Funcionario[] funcionarios) {
+        this.funcionarios = funcionarios;
     }
 }
