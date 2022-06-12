@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Vendedor extends Funcionario {
     private Double comissaoLoja;
 
-    public Vendedor(String tipoDocumento, String nroDocumento, String nomeCompleto, LocalDate dataNascimento, String endereco, Double salarioBase, Double comissaoLoja) {
+    public Vendedor(String tipoDocumento, String nroDocumento, String nomeCompleto, LocalDate dataNascimento, String endereco, Double salarioBase) {
         super(tipoDocumento, nroDocumento, nomeCompleto, dataNascimento, endereco, salarioBase);
         this.comissaoLoja = 1D;
     }
@@ -19,5 +19,13 @@ public class Vendedor extends Funcionario {
     }
     public void revisarEstoque() {
         System.out.println("O vendedor " + getNomeCompleto() + " vai revisar o estoque dos produtos");
+    }
+
+    public Double getComissaoLoja() {
+        return comissaoLoja;
+    }
+
+    public void setComissaoLoja(Double comissaoLoja) {
+        this.comissaoLoja = comissaoLoja;
     }
 }

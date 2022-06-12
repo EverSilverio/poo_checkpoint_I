@@ -4,11 +4,11 @@ import java.time.LocalDate;
 
 public class PedidoConserto extends Pedido {
     private String modeloAparelho;
-    private int tipoDefeito;
+    private String tipoDefeito;
     private LocalDate dataEntrada;
     private LocalDate dataSaida;
 
-    public PedidoConserto(int codigo, String modeloAparelho, int tipoDefeito, LocalDate dataEntrada, LocalDate dataSaida) {
+    public PedidoConserto(int codigo, String modeloAparelho, String tipoDefeito, LocalDate dataEntrada, LocalDate dataSaida) {
         super(codigo);
         this.modeloAparelho = modeloAparelho;
         this.tipoDefeito = tipoDefeito;
@@ -28,11 +28,11 @@ public class PedidoConserto extends Pedido {
         this.modeloAparelho = modeloAparelho;
     }
 
-    public int getTipoDefeito() {
+    public String getTipoDefeito() {
         return tipoDefeito;
     }
 
-    public void setTipoDefeito(int tipoDefeito) {
+    public void setTipoDefeito(String tipoDefeito) {
         this.tipoDefeito = tipoDefeito;
     }
 

@@ -5,14 +5,14 @@ import java.time.LocalDate;
 public class Gerente extends Funcionario {
     private Double comissaoVendas;
 
-    public Gerente(String tipoDocumento, String nroDocumento, String nomeCompleto, LocalDate dataNascimento, String endereco, Double salarioBase, Double comissaoVendas) {
+    public Gerente(String tipoDocumento, String nroDocumento, String nomeCompleto, LocalDate dataNascimento, String endereco, Double salarioBase) {
         super(tipoDocumento, nroDocumento, nomeCompleto, dataNascimento, endereco, salarioBase);
         this.comissaoVendas = 0.5;
     }
 
     @Override
     public void calcularSalario() {
-        System.out.println(getNomeCompleto() + " é o gerente da loja e o seu salario base é de " + getSalarioBase() + " com um adicional de" + this.comissaoVendas + " % do valor total das vendas.");
+        System.out.println(getNomeCompleto() + " é o gerente da loja e o seu salario base é de " + getSalarioBase() + " com um adicional de " + this.comissaoVendas + " % do valor total das vendas.");
     }
 
     public void organizarEquipe() {

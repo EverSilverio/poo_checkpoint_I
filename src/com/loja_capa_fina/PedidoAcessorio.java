@@ -1,20 +1,20 @@
 package com.loja_capa_fina;
 
 public class PedidoAcessorio extends Pedido {
-    private int codAcessorio[];
+    private int codAcessorio;
     private int quantidade;
 
-    public PedidoAcessorio(int codigo, int[] codAcessorio, int quantidade) {
+    public PedidoAcessorio(int codigo, int codAcessorio, int quantidade) {
         super(codigo);
         this.codAcessorio = codAcessorio;
         this.quantidade = quantidade;
     }
 
-    public int[] getCodAcessorio() {
+    public int getCodAcessorio() {
         return codAcessorio;
     }
 
-    public void setCodAcessorio(int[] codAcessorio) {
+    public void setCodAcessorio(int codAcessorio) {
         this.codAcessorio = codAcessorio;
     }
 

@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Tecnico extends Funcionario {
     private Double porcentagemAdicional;
 
-    public Tecnico(String tipoDocumento, String nroDocumento, String nomeCompleto, LocalDate dataNascimento, String endereco, Double salarioBase, Double porcentagemAdicional) {
+    public Tecnico(String tipoDocumento, String nroDocumento, String nomeCompleto, LocalDate dataNascimento, String endereco, Double salarioBase) {
         super(tipoDocumento, nroDocumento, nomeCompleto, dataNascimento, endereco, salarioBase);
         this.porcentagemAdicional = 25D;
     }

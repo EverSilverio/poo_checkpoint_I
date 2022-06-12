@@ -14,6 +14,10 @@ public class Cliente {
         this.telefone = telefone;
     }
 
+    public void realizarPedido() {
+        System.out.println("Cliente " + this.nomeCompleto + " está realizando um pedido!");
+    }
+
     public String getCpf() {
         return cpf;
     }
